@@ -46,4 +46,7 @@ This project contains the steps and required files to perform bench marking Mong
 
 
 # Installation of YCSB tool.
+-  Download tar archive of the YCSB tool using following command 
 
+`curl -O -location https://github.com/brainfrankcooper/YCSB/releases/download/0.15.0/ycsb-0.15.0.tar.gz`
+-  
