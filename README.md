@@ -20,5 +20,4 @@ This project contains the steps and required files to perform bench marking Mong
 ![image](https://user-images.githubusercontent.com/44334277/209716297-88ef7f75-76cc-4ff8-9142-04b6a0ea3d06.png)
 
 # Steps to setup Cassandra for Benchmarking
-
-
+1. Install openjdk using following command.
