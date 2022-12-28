@@ -70,4 +70,14 @@ This project contains the steps and required files to perform bench marking Mong
 
 - All the predefined workload files can be found in `../ycsb-0.15.0/workloads/*`
 
-# Important parameters updated or changed for different tests for this term paper.
+# Important parameters updated or changed in workload files for different tests for this term paper.
+
+- `recordcount:` This decides number of records to be loaded when ran ycsb with load option.
+- `operationcount:` This decides number of operations to be run for the test run.
+- `readpropotion`: This parameter decides how much percent of operations of operationcount will be read operations.
+- `insertpropotion`: This parameter decides how much percent of operations of operationcount will be insert operations.
+- `updatepropotion`: This parameter decides how much percent of operations of operationcount will be update operations.
+
+
+
+
