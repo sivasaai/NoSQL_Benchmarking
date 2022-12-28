@@ -47,8 +47,13 @@ This project contains the steps and required files to perform bench marking Mong
 - connect to Cassandra client prompt using command `cqlsh`
 
 - Create a keyspace with name `ycsb` using the following command.
+`create keyspace ycsb WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor':3};`
 
-- Create 
+-  Create usertable using following command.
+
+![image](https://user-images.githubusercontent.com/44334277/209742738-f69f947d-a5cf-4424-bf80-812ff3dc08e1.png)
+
+
 # Installation of YCSB tool.
 -  Download tar archive of the YCSB tool using following command 
 
