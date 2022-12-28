@@ -44,7 +44,9 @@ This project contains the steps and required files to perform bench marking Mong
 
 - Start cassandra service using command `systemctl start cassandra`
 
+- connect to Cassandra client prompt using command `cqlsh`
 
+- 
 # Installation of YCSB tool.
 -  Download tar archive of the YCSB tool using following command 
 
