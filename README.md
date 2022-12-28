@@ -90,6 +90,7 @@ for this `readproportion` is set to 0 and `updateproportion`  is set to 1.00.
 
 # How to run and collect the execution time of workload on cassandra.
 
+`./bin/ycsb run cassandra-cql -p hosts="127.0.0.1" -s -P workloads/workloadg -p recordcount=700000`
 
 # How to run and collect the execution time of workload on MongoDB.
 
