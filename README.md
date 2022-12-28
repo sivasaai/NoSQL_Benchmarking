@@ -54,4 +54,7 @@ This project contains the steps and required files to perform bench marking Mong
 
 `tar -xvfz ycsb-0.15.0.tar.gz`
 
-- 
+- change current directory to `ycsb-0.15.0`
+ using the following command.
+
+`cd ycsb-0.15.0`
