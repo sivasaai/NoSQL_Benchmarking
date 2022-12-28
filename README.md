@@ -79,5 +79,21 @@ This project contains the steps and required files to perform bench marking Mong
 - `updatepropotion`: This parameter decides how much percent of operations of operationcount will be update operations.
 
 
+# Custom work loads.
+
+- For the purpose of testing the Update Heavy workloads and Update only workload , the following two custom workloads were added.
+- workloadg(This is upload heavy workload which has 5% of read operations and 95 % of update operations)
+for this `readproportion` is set to 0.05 and `updateproportion`  is set to 0.95.
+- workloadf(This is upload only workload which is 100% of update of operations)
+for this `readproportion` is set to 0 and `updateproportion`  is set to 1.00.
+- `workloadg` and `workloadf` files are added in the repostiory for the use.
+
+# How to run and collect the execution time of workload on cassandra.
+
+
+# How to run and collect the execution time of workload on MongoDB.
+
+
+
 
 
