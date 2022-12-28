@@ -46,7 +46,9 @@ This project contains the steps and required files to perform bench marking Mong
 
 - connect to Cassandra client prompt using command `cqlsh`
 
-- 
+- Create a keyspace with name `ycsb` using the following command.
+
+- Create 
 # Installation of YCSB tool.
 -  Download tar archive of the YCSB tool using following command 
 
