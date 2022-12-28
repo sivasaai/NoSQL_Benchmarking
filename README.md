@@ -88,11 +88,55 @@ for this `readproportion` is set to 0.05 and `updateproportion`  is set to 0.95.
 for this `readproportion` is set to 0 and `updateproportion`  is set to 1.00.
 - `workloadg` and `workloadf` files are added in the repostiory for the use.
 
-# How to run and collect the execution time of workload on cassandra.
+# How to load data using ycsb in cassandra?
+- The following command is used to load a data of 100000 records in cassandra
+`./bin/ycsb load cassandra-cql -p hosts="127.0.0.1" -s -P workloads/workloada -p recordcount=100000`
+- recordcount parameter could be changed to a different number depending the rquirement to load more or less records.
 
-`./bin/ycsb run cassandra-cql -p hosts="127.0.0.1" -s -P workloads/workloadg -p recordcount=700000`
+# How to load data using ycsb in MongoDB?
+- The following command is used to load a data of 100000 records in cassandra
+` ./bin/ycsb load mongodb -s -P workloads/workloada -p recordcount=280000 -p  mongodb.url="mongodb://MongoUser:Password@127.0.0.1:27017" -p mongodb.auth="true"`
+- recordcount parameter could be changed to a different number depending the rquirement to load more or less records.
 
-# How to run and collect the execution time of workload on MongoDB.
+# How to run a workload on cassandra using ycsb?.
+
+- The following command is used to run `workloada` for a loaded data of 700000 records
+
+`./bin/ycsb run cassandra-cql -p hosts="127.0.0.1" -s -P workloads/workloada -p recordcount=700000`
+
+
+# How to run a workload on MongoDB using ycsb?
+
+
+- The following command is used to run `workloada` for a loaded data of 700000 records
+
+`./bin/ycsb run mongodb -s -P workloads/workloadh -p recordcount=700000 -p mongodb.url="mongodb://mongoAdmin:changeMe@127.0.0.1:27017" -p mongodb.auth="true"`
+
+# How to get the execution time from the output of the ycsb workload runs.
+
+- Data loading or workload runs gives the similar to the following screen shot.
+![image](https://user-images.githubusercontent.com/44334277/209771521-c27b17fd-1496-45cd-a366-fa0d467eba91.png)
+
+- `[OVERALL], RunTime(ms)` in the output implies execution time.
+
+# Steps followed for the data collected for the experimental evaluation of the paper.
+
+1. Run the ycsb command to load 100,000 records  in cassandra/mongodb as shown in earlier sections.
+2. Collect the execution time of data loading into excel sheet.
+3. Run workloada on cassandra/mongodb for 100,000 records and 100,000 operations (operationcount in workload is updated same as record count for this).
+4. Collect the execution time of workloada for 100,000 records into excel sheet.
+5. Repeat 3 & 4 for all the workloads B,C,F,G,H.
+6. do one of the following depending on whether it is for mongodb or cassandra.
+- For cassandra: truncate the usertable using following command in cqlsh prompt.
+
+`truncate table ycsb.usertable;`
+- For MongoDB: drop the usertable collection from ycsb table using following command.
+
+`db.usertable.drop()`
+
+7. Reboot the machine.
+8. repeat it 1 to 7, 2 more times and not the average of the values recorded for all the three runs for 100,000 records.
+9. repeat 1 to 8 for 2,80,000 records and 7,00,00.
 
 
 
