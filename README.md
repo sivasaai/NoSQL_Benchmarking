@@ -67,3 +67,7 @@ This project contains the steps and required files to perform bench marking Mong
  using the following command.
 
 `cd ycsb-0.15.0`
+
+- All the predefined workload files can be found in `../ycsb-0.15.0/workloads/*`
+
+# Important parameters updated or changed for different tests for this term paper.
