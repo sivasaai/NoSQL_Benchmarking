@@ -52,4 +52,6 @@ This project contains the steps and required files to perform bench marking Mong
 
 - untar the downloaded archive using the following command
 
+`tar -xvfz ycsb-0.15.0.tar.gz`
 
+- 
